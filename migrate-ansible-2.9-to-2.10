@@ -1,0 +1,37 @@
+[komi@2002L2BBEFE ansible]$ source ./hacking/env-setup
+Traceback (most recent call last):
+  File "setup.py", line 107, in <module>
+    _validate_install_ansible_base()
+  File "setup.py", line 98, in _validate_install_ansible_base
+    ''' % (stars, __version__, stars)
+RuntimeError:
+
+    ****************************************************************************
+
+    Cannot install ansible-base with a pre-existing ansible==2.9.9
+    installation.
+
+    Installing ansible-base with ansible-2.9 or older currently installed with
+    pip is known to cause problems. Please uninstall ansible and install the new
+    version:
+
+        pip uninstall ansible
+        pip install ansible-base
+
+    If you want to skip the conflict checks and manually resolve any issues
+    afterwards, set the ANSIBLE_SKIP_CONFLICT_CHECK environment variable:
+
+        ANSIBLE_SKIP_CONFLICT_CHECK=1 pip install ansible-base
+
+    ****************************************************************************
+
+
+Setting up Ansible to run out of checkout...
+
+PATH=/home/komi/ansible/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/komi/.local/bin:/home/komi/bin
+PYTHONPATH=/home/komi/ansible/lib
+MANPATH=/home/komi/ansible/docs/man:/usr/local/share/man:/usr/share/man
+
+Remember, you may wish to specify your host file with -i
+
+Done!
